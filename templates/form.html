@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Any questions?{% endblock %}</h1>
+    <div style="display: none;">{% block nav_form %}active{% endblock %}</div>
+
+    <div style="min-width: 400px; margin: auto; padding: 20px; float: left; text-align: left;">
+    <form method="post">
+        <div class="mb-3">
+            <label for="user_name" class="form-label">Your name</label>
+            <input type="text" id="user_name" name="user_name" placeholder="Your name" class="form-control" value="{{ request.form['user_name'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="user_email" class="form-label">Your email</label>
+            <input type="email" id="user_email" name="user_email" placeholder="Your email" class="form-control" value="{{ request.form['user_email'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="user_question" class="form-label">Your question</label>
+            <textarea id="user_question" rows="3" name="user_question" placeholder="Your question" class="form-control">{{ request.form['user_question'] }}</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+    <div style="max-width: 100%; overflow: hidden; margin: auto; padding: 30px 20px; float: left; text-align: center;">
+        <img src="https://www.kiddnation.com/wp-content/uploads/2013/11/ask_anything_header.jpg" alt="img">
+    </div>
+{% endblock %}

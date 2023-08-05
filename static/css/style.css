@@ -1,0 +1,55 @@
+.container {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    background-image: url("wp2714634.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+}
+.carousel {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.celeb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.celeb.active {
+  display: block;
+}
+
+.fade-in {
+  animation: fade-in 1s;
+}
+
+.fade-out {
+  animation: fade-out 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
